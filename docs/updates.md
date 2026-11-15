@@ -21,7 +21,7 @@ One HTTPS request to `api.github.com` for the latest release of this repository,
 Everything that comes from the network is treated as untrusted. In order:
 
 1. **Only allowed hosts.** The check uses `api.github.com`. The download may only start at `github.com` and may only be redirected to GitHub's release storage hosts. Every address, including every redirect, must be `https`, on the default port, without credentials, on the list. Redirects are followed by hand and capped at five. Anything else is refused before a request is sent.
-2. **Only this project's release asset.** The installer must be named exactly `HapticGamingBridge-Setup-<version>.exe` and its address must be exactly `https://github.com/giovannimazza/haptic-bridge/releases/download/<tag>/<that name>`.
+2. **Only this project's release asset.** The installer must be named exactly `HapticGamingBridge-Setup-<version>.exe` and its address must be exactly `https://github.com/giovannimazza/haptic-gaming-bridge/releases/download/<tag>/<that name>`.
 3. **A checksum is required.** GitHub publishes a SHA-256 digest for every release asset. A release without one is offered, but the app will not install it: it opens the release page instead.
 4. **Size.** The size GitHub lists must be sensible (1 MB to 300 MB). The download must announce that size, never deliver more (reading stops at the limit, so a server cannot fill the disk) and never less.
 5. **SHA-256.** The downloaded bytes must hash to the published digest, or the file is deleted.

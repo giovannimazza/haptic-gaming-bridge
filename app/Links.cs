@@ -8,7 +8,7 @@ namespace HapticGamingBridge
     // for arbitrary URLs or files.
     public static class Links
     {
-        public const string Repo = "https://github.com/giovannimazza/haptic-bridge";
+        public const string Repo = "https://github.com/giovannimazza/haptic-gaming-bridge";
         public const string Issues = Repo + "/issues";
         public const string Releases = Repo + "/releases";
         public const string Kofi = "https://ko-fi.com/giovanbattistamazza";
@@ -19,7 +19,7 @@ namespace HapticGamingBridge
             if (u.Scheme != Uri.UriSchemeHttps || !u.IsDefaultPort || u.UserInfo.Length != 0) return false;
 
             if (u.Host == "github.com")
-                return u.AbsolutePath == "/giovannimazza/haptic-bridge" || u.AbsolutePath.StartsWith("/giovannimazza/haptic-bridge/", StringComparison.Ordinal);
+                return u.AbsolutePath == "/giovannimazza/haptic-gaming-bridge" || u.AbsolutePath.StartsWith("/giovannimazza/haptic-gaming-bridge/", StringComparison.Ordinal);
 
             if (u.Host == "ko-fi.com")
                 return u.AbsolutePath == "/giovanbattistamazza" || u.AbsolutePath == "/giovanbattistamazza/";

@@ -3,7 +3,7 @@
 // Everything from the network is validated, and written with textContent, never as HTML.
 (() => {
   'use strict';
-  const REPO = 'giovannimazza/haptic-bridge';
+  const REPO = 'giovannimazza/haptic-gaming-bridge';
   const API = `https://api.github.com/repos/${REPO}/releases/latest`;
   const lang = (document.documentElement.lang || 'en').slice(0, 2);
   const $$ = (sel) => document.querySelectorAll(sel);

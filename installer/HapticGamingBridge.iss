@@ -12,8 +12,8 @@ AppId={{6E1266AA-120C-4A08-90C4-B432667A9CE4}
 AppName={#AppName}
 AppVersion={#AppVersion}
 AppPublisher=giovannimazza
-AppPublisherURL=https://github.com/giovannimazza/haptic-bridge
-AppSupportURL=https://github.com/giovannimazza/haptic-bridge/issues
+AppPublisherURL=https://github.com/giovannimazza/haptic-gaming-bridge
+AppSupportURL=https://github.com/giovannimazza/haptic-gaming-bridge/issues
 DefaultDirName={autopf}\{#AppName}
 DisableProgramGroupPage=yes
 ; Per-user install, no admin prompt.

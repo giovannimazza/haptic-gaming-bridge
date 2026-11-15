@@ -44,7 +44,7 @@ namespace HapticGamingBridge
 
     public sealed class UpdateService : IDisposable
     {
-        public const string Repo = "giovannimazza/haptic-bridge";
+        public const string Repo = "giovannimazza/haptic-gaming-bridge";
         public static readonly Uri LatestReleaseApi = new($"https://api.github.com/repos/{Repo}/releases/latest");
 
         public const long MaxInstallerBytes = 300L * 1024 * 1024;

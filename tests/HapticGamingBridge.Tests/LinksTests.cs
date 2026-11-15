@@ -8,21 +8,21 @@ namespace HapticGamingBridge.Tests
     public class LinksTests
     {
         [Theory]
-        [InlineData("https://github.com/giovannimazza/haptic-bridge")]
-        [InlineData("https://github.com/giovannimazza/haptic-bridge/issues")]
-        [InlineData("https://github.com/giovannimazza/haptic-bridge/releases")]
-        [InlineData("https://github.com/giovannimazza/haptic-bridge#readme")]
+        [InlineData("https://github.com/giovannimazza/haptic-gaming-bridge")]
+        [InlineData("https://github.com/giovannimazza/haptic-gaming-bridge/issues")]
+        [InlineData("https://github.com/giovannimazza/haptic-gaming-bridge/releases")]
+        [InlineData("https://github.com/giovannimazza/haptic-gaming-bridge#readme")]
         [InlineData("https://ko-fi.com/giovanbattistamazza")]
         public void Project_and_donation_pages_are_allowed(string url) => Assert.True(Links.IsAllowed(url));
 
         [Theory]
-        [InlineData("http://github.com/giovannimazza/haptic-bridge")]                      // not https
-        [InlineData("https://github.com/giovannimazza/haptic-bridge-evil")]                // prefix trick
+        [InlineData("http://github.com/giovannimazza/haptic-gaming-bridge")]                      // not https
+        [InlineData("https://github.com/giovannimazza/haptic-gaming-bridge-evil")]                // prefix trick
         [InlineData("https://github.com/someone-else/haptic-bridge")]
-        [InlineData("https://github.com.evil.example/giovannimazza/haptic-bridge")]
-        [InlineData("https://evil.example/https://github.com/giovannimazza/haptic-bridge")]
-        [InlineData("https://user:pw@github.com/giovannimazza/haptic-bridge")]
-        [InlineData("https://github.com:8443/giovannimazza/haptic-bridge")]
+        [InlineData("https://github.com.evil.example/giovannimazza/haptic-gaming-bridge")]
+        [InlineData("https://evil.example/https://github.com/giovannimazza/haptic-gaming-bridge")]
+        [InlineData("https://user:pw@github.com/giovannimazza/haptic-gaming-bridge")]
+        [InlineData("https://github.com:8443/giovannimazza/haptic-gaming-bridge")]
         [InlineData("https://paypal.me/giovanbattistamazza")]            // PayPal is no longer linked
         [InlineData("https://ko-fi.com/someone-else")]
         [InlineData("https://ko-fi.com/giovanbattistamazza-evil")]

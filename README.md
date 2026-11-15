@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://giovannimazza.github.io/haptic-bridge/"><img src="docs/assets/visit-site.svg" alt="Visit the website" height="48"></a>
+  <a href="https://giovannimazza.github.io/haptic-gaming-bridge/"><img src="docs/assets/visit-site.svg" alt="Visit the website" height="48"></a>
   <a href="https://ko-fi.com/giovanbattistamazza"><img src="docs/assets/support-on-kofi.svg" alt="Buy me a Ko-fi" height="48"></a>
 </p>
 
@@ -50,7 +50,7 @@ The Actions SDK lets a plugin raise haptic events, but only from the plugin's ow
 
 ## Install
 
-Download `HapticGamingBridge-Setup-<version>.exe` from the [latest release](https://github.com/giovannimazza/haptic-bridge/releases/latest) and run it. It installs the desktop app for the current user (no administrator prompt) and, if you leave the task ticked, opens the Logi installer for the Options+ plugin. The plugin package is also attached to the release as `HapticGamingBridge_1_0.lplug4` if you prefer to install it by double-clicking.
+Download `HapticGamingBridge-Setup-<version>.exe` from the [latest release](https://github.com/giovannimazza/haptic-gaming-bridge/releases/latest) and run it. It installs the desktop app for the current user (no administrator prompt) and, if you leave the task ticked, opens the Logi installer for the Options+ plugin. The plugin package is also attached to the release as `HapticGamingBridge_1_0.lplug4` if you prefer to install it by double-clicking.
 
 The installer is not code-signed, so Windows SmartScreen may warn before running it.
 

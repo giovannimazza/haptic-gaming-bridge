@@ -310,9 +310,9 @@
                             <TextBlock x:Name="VersionText" Foreground="{StaticResource Text}" Text="Haptic Gaming Bridge" />
                             <TextBlock Foreground="{StaticResource Muted}" TextWrapping="Wrap" LineHeight="21" Margin="0,6,0,0" Text="Free and open source under the MIT license. Independent project, not affiliated with or endorsed by Logitech. Source code, releases and bug reports are on GitHub." />
                             <StackPanel Orientation="Horizontal" Margin="0,16,0,0">
-                                <Button Content="Open on GitHub" Style="{StaticResource BtnPrimary}" Tag="https://github.com/giovannimazza/haptic-bridge" Click="Link_Click" />
-                                <Button Content="Report an issue" Style="{StaticResource Btn}" Margin="8,0,0,0" Tag="https://github.com/giovannimazza/haptic-bridge/issues" Click="Link_Click" />
-                                <Button Content="Releases" Style="{StaticResource Btn}" Margin="8,0,0,0" Tag="https://github.com/giovannimazza/haptic-bridge/releases" Click="Link_Click" />
+                                <Button Content="Open on GitHub" Style="{StaticResource BtnPrimary}" Tag="https://github.com/giovannimazza/haptic-gaming-bridge" Click="Link_Click" />
+                                <Button Content="Report an issue" Style="{StaticResource Btn}" Margin="8,0,0,0" Tag="https://github.com/giovannimazza/haptic-gaming-bridge/issues" Click="Link_Click" />
+                                <Button Content="Releases" Style="{StaticResource Btn}" Margin="8,0,0,0" Tag="https://github.com/giovannimazza/haptic-gaming-bridge/releases" Click="Link_Click" />
                             </StackPanel>
                         </StackPanel>
                     </Border>

@@ -13,7 +13,7 @@ namespace HapticGamingBridge.Tests
     public class UpdateServiceTests
     {
         private readonly string[] _foldersBefore = Directory.GetDirectories(Path.GetTempPath(), UpdateInstaller.TempFolderPrefix + "*");
-        private const string Repo = "giovannimazza/haptic-bridge";
+        private const string Repo = "giovannimazza/haptic-gaming-bridge";
 
         private sealed class FakeGitHub : HttpMessageHandler
         {
@@ -189,13 +189,13 @@ namespace HapticGamingBridge.Tests
         }
 
         [Theory]
-        [InlineData("http://github.com/giovannimazza/haptic-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
-        [InlineData("https://evil.example/giovannimazza/haptic-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
+        [InlineData("http://github.com/giovannimazza/haptic-gaming-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
+        [InlineData("https://evil.example/giovannimazza/haptic-gaming-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
         [InlineData("https://github.com/someone-else/haptic-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
-        [InlineData("https://github.com/giovannimazza/haptic-bridge/releases/download/v1.1.0/HapticGamingBridge-Setup-1.2.0.exe")]
-        [InlineData("https://github.com.evil.example/giovannimazza/haptic-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
-        [InlineData("https://user@github.com/giovannimazza/haptic-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
-        [InlineData(" https://github.com/giovannimazza/haptic-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
+        [InlineData("https://github.com/giovannimazza/haptic-gaming-bridge/releases/download/v1.1.0/HapticGamingBridge-Setup-1.2.0.exe")]
+        [InlineData("https://github.com.evil.example/giovannimazza/haptic-gaming-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
+        [InlineData("https://user@github.com/giovannimazza/haptic-gaming-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
+        [InlineData(" https://github.com/giovannimazza/haptic-gaming-bridge/releases/download/v1.2.0/HapticGamingBridge-Setup-1.2.0.exe")]
         public async Task A_download_address_that_is_not_this_projects_release_asset_is_dropped(string url)
         {
             using var s = Service(new FakeGitHub(_ => Json(ReleaseJson(url: url))));
@@ -387,7 +387,7 @@ namespace HapticGamingBridge.Tests
         public async Task A_relative_redirect_stays_on_the_same_allowed_host()
         {
             var calls = 0;
-            using var s = Service(new FakeGitHub(r => calls++ == 0 ? Redirect("/giovannimazza/haptic-bridge/elsewhere") : File200(InstallerBytes)));
+            using var s = Service(new FakeGitHub(r => calls++ == 0 ? Redirect("/giovannimazza/haptic-gaming-bridge/elsewhere") : File200(InstallerBytes)));
             var path = await s.DownloadAsync(Release());
             Cleanup(path);
         }

@@ -4,7 +4,7 @@ A small static site in [`site/`](../site) (English at `/`, Italian at `/it/`): w
 
 ## How the download button stays current
 
-The page does not hard-code a version. `assets/app.js` asks `api.github.com` for the latest release **from the visitor's browser** and fills in the version, date, size, SHA-256 and the links to the installer, the plugin and `SHA256SUMS.txt`. What it receives is validated first: the tag must be `vX.Y.Z`, and every download address must be exactly `https://github.com/giovannimazza/haptic-bridge/releases/download/<tag>/<file>`. It is written into the page with `textContent`, never as HTML.
+The page does not hard-code a version. `assets/app.js` asks `api.github.com` for the latest release **from the visitor's browser** and fills in the version, date, size, SHA-256 and the links to the installer, the plugin and `SHA256SUMS.txt`. What it receives is validated first: the tag must be `vX.Y.Z`, and every download address must be exactly `https://github.com/giovannimazza/haptic-gaming-bridge/releases/download/<tag>/<file>`. It is written into the page with `textContent`, never as HTML.
 
 Without JavaScript, or if GitHub cannot be reached, the buttons simply point at the releases page. So publishing a release is all it takes to update the site: nothing has to be redeployed.
 

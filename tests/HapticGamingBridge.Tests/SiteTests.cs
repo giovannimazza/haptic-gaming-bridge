@@ -53,7 +53,7 @@ namespace HapticGamingBridge.Tests
                 var uri = new Uri(m.Groups[1].Value);
                 Assert.Equal(Uri.UriSchemeHttps, uri.Scheme);
                 Assert.True(
-                    (uri.Host == "github.com" && uri.AbsolutePath.StartsWith("/giovannimazza/haptic-bridge")) ||
+                    (uri.Host == "github.com" && uri.AbsolutePath.StartsWith("/giovannimazza/haptic-gaming-bridge")) ||
                     (uri.Host == "ko-fi.com" && uri.AbsolutePath == "/giovanbattistamazza"),
                     $"unexpected link {uri}");
             }
@@ -124,7 +124,7 @@ namespace HapticGamingBridge.Tests
         public void The_script_only_contacts_github_and_never_writes_html_from_what_it_receives()
         {
             var js = File.ReadAllText(Path.Combine(Root(), "assets", "app.js"));
-            Assert.Contains("const REPO = 'giovannimazza/haptic-bridge'", js);
+            Assert.Contains("const REPO = 'giovannimazza/haptic-gaming-bridge'", js);
             Assert.Contains("https://api.github.com/repos/${REPO}/releases/latest", js);
             Assert.DoesNotMatch(@"innerHTML|outerHTML|insertAdjacentHTML|document\.write|eval\(|new Function", js);
             var hosts = Regex.Matches(js, @"https?://([a-z0-9.\-]+)").Select(m => m.Groups[1].Value).Distinct().ToArray();
